@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ssssssss</title>
+		<link rel="stylesheet" type="text/css" href="css/lo.css"/>
+		<link rel="stylesheet" type="text/css" href="css/lun.css"/>
+		<link rel="stylesheet" href="css/lun2.css">
+		<script src="js/yz.js"></script>
+		<link rel="stylesheet" href="css/01.css">
+		<style>
+			.foot{
+				position: relative;
+				top: -550px;
+				background-color: antiquewhite;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="con">
+			
+		
+		<header class="head">
+			<div class="logo">
+			<a href="index.html"></a>
+			</div>
+				<div class="log">
+				
+			</div>
+			<div class="loge">
+				<a href="index.html">返回</a>
+			</div>
+			<h1 class="mui-title">
+				
+			</h1>
+		<section>
+			
+			<div class="box">
+			    <div class="box-th">
+			        <ul>
+			           
+						<li data-index="0" class="current"><a href="#">手机</a></li>
+						<li data-index="1"><a href="#">笔记本/平板</a></li>
+						<li data-index="2"><a href="#">手表手环</a></li>
+						<li data-index="3"><a href="#">耳机音箱</a></li>
+						<li data-index="4"><a href="#">智慧屏</a></li>
+						<li data-index="5"><a href="#">智能路由</a></li>
+						<li data-index="6"><a href="#">华为智选</a></li>
+						<li data-index="7"><a href="#">企业购</a></li>
+			        </ul>
+			    </div>
+			    <div class="box-tb">
+			        <div class="item"><li><a href="#">华为mate系列</a></li></div>
+			        <div class="item" id="z1"><li><a href="#">华为商务本系列</a></li> </div>
+			        <div class="item" id="z2"><li><a href="#">华为运动手环</a></li></div>
+			        <div class="item" id="z3"><li><a href="#">华为智能音箱</a></li></div>
+					<div class="item" id="z4"><li><a href="#">华大高刷显示器</a></li></div>
+					<div class="item" id="z5"><li><a href="#">华为智能路由</a></li></div>
+					<div class="item" id="z6"><li><a href="#">欢迎选购</a></li></div>
+					<div class="item" id="z7"><li><a href="#">联系我们</a></li></div>
+			</div>
+		</section>
+		</header>
+		</div>
+		   <body onload="changeImg()" >
+			   <div class="sss">
+			   	
+			   
+		       <div class="main_bar" id="eee">
+		           <div id="login_form" class="login_form">
+		               <div class="title"></div>
+		               <form action="login.html">
+		                   <div id="form_widgt">
+		                       <input type="text" name="name" class="name" placeholder="请输入账号"><br>
+		                       <input type="password" name="pwd" class="pwd"  placeholder="请输入密码"><br>
+		                       <p class="yzm"><input type="text" name="code" id="codeInput" class="code" placeholder="验证码">
+		                       <span id="code" class="code_pic" title="看不清，换一张"></span></p>
+		                       <p class="errorTips" id="errorTips"></p>
+		                       <a href="javascript:;" name="sbm" class="sbm_btn" onclick="return check()">登录</a>
+		   
+		                       
+		                   </div>
+		               </form>
+		               <div class="re_pwd"><a href="">忘记密码</a></div>
+		           </div>
+		       </div>
+			</div>
+			<div class="foot">
+				<img src="img/foot.webp" >
+			</div>
+		</body>
+<script>
+	var list = document.querySelector('.box-th').querySelectorAll('li');
+	var items = document.querySelector('.box-tb').querySelectorAll('.item');
+	for (var i = 0; i < list.length; i++) {
+	    list[i].onclick = function() {
+	        // 导航栏样式切换，排他算法
+	        for (var i = 0; i < list.length; i++) {
+	            list[i].className = '';
+	        }
+	        this.className = 'current';
+	
+	        // 下面展示内容切换，排他算法
+	        var index = this.getAttribute('data-index');
+	        for (var i = 0; i < items.length; i++) {
+	            items[i].style.display = 'none';
+	        }
+	        items[index].style.display = 'block';
+	    }
+	}
+</script>
+		</html>
